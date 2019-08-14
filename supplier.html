@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Supplier Details</title>
+	<link rel="stylesheet" type="text/css" href="F:\ARUN\style.css">
+<script>
+			var arr=[];		
+		function validate()
+{
+	var Name=document.forms["admin"]["Name"].value;
+	var Address=document.forms["admin"]["Address"].value;
+	if (Name.trim().length==0 || Address.trim().length==0) {
+	 alert("field cannot be empty");
+    }
+	else{
+var user={"SupplierName":Name,"SupplierAddress":Address}
+arr.push(user)
+}
+}
+function display()
+{
+	document.write("<table border='2'>")
+	document.write("<th>name")
+	document.write("<th>Address")
+	for(i=0;i<arr.length;i++){
+		document.write("<tr>")
+		document.write("<td>")
+		document.write(arr[i].SupplierName);
+		document.write("</td>")
+		document.write("<td>")
+		document.write(arr[i].SupplierAddress);
+		document.write("</td>")
+		document.write("</tr>")	
+	}
+}
+	</script>
+
+</head>
+<body>
+	<div class="form">
+	<form  name="admin">
+SupplierName:&nbsp&nbsp&nbsp <input type="text" name='Name'/>
+<br><br>
+SupplierAddress: <input type="text" name='Address'/><br><br>
+
+<input class="btn" type='reset' value='add' onclick="validate()"/>
+<input class="btn" type="button" value="display" onclick="display()"/>
+</form>
+</div>
+</body>
+</html>

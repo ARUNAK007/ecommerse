@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="F:\ARUN\style.css">
+<script>
+			var arr=[];		
+		function validate()
+{
+	var name=document.forms["admin"]["name"].value;
+	var amount=document.forms["admin"]["amount"].value;
+	var quantity=document.forms["admin"]["quantity"].value;
+	if (name.trim().length==0 || amount.trim().length==0 || quantity.trim().length==0) {
+	 alert("field cannot be empty");
+    }
+	else{
+var user={"product":name,"price":amount,"quantity":quantity}
+arr.push(user)
+}
+}
+function display()
+{
+	document.write("<table border='2'>")
+	document.write("<th>product")
+	document.write("<th>price")
+	document.write("<th>quantity")
+	for(i=0;i<arr.length;i++){
+		document.write("<tr>")
+		document.write("<td>")
+		document.write(arr[i].product);
+		document.write("</td>")
+		document.write("<td>")
+		document.write(arr[i].price);
+		document.write("</td>")
+		document.write("<td>")
+		document.write(arr[i].quantity);
+		document.write("</td>")
+		document.write("</tr>")	
+	}
+}
+	</script>
+
+</head>
+<body>
+	<div class="form">
+	<form  name="admin">
+product: <input type="text" name='name'/>
+<br><br>
+price:&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name='amount'/>
+<br><br>
+quantity: <input type="text" name='quantity'/><br><br>
+
+<input class="btn" type='reset' value='add' onclick="validate()"/>
+<input class="btn" type="button" value="display" onclick="display()"/>
+</form>
+</div>
+</body>
+</html>

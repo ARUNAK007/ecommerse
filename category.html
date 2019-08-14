@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> category Details</title>  
+	<link rel="stylesheet" type="text/css" href="F:\ARUN\style.css">
+<script>
+			var arr=[];		
+		function validate()
+{
+	var Name=document.forms["admin"]["Name"].value;
+	if (Name.trim().length==0 ){
+	 alert("field cannot be empty");
+    return false;
+    }
+	else{
+var user={"CategoryName":Name}
+arr.push(user)
+}
+}
+function display()
+{
+	document.write("<table border='2'>")
+	document.write("<th>CategoryName")
+	for(i=0;i<arr.length;i++){
+		document.write("<tr>")
+		document.write("<td>")
+		document.write(arr[i].CategoryName);
+		document.write("</td>")
+		document.write("</tr>")	
+	}
+}
+	</script>
+
+</head>
+<body>
+	<div class="form">
+	<form  name="admin">
+CategoryName: <input type="text" name='Name'/><br><br>
+<input class="btn" type='reset' value='add' onclick="validate()"/>
+<input class="btn" type="button" value="display" onclick="display()"/>
+</form>
+</div>
+</body>
+</html>

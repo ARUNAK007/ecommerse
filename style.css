@@ -1,0 +1,142 @@
+body{
+	color: none;
+	font-style:normal;
+	background-color: lightblue;
+}
+h1{
+	color:#fff;
+	text-align: left;
+}
+h1,input,nav{
+display:inline-block;	
+}
+nav{
+	padding-top: 40px;
+	float: right;
+}
+nav a {
+	text-align: right;
+	list-style-type:none;
+}
+input{
+	text-align:left;
+	overflow: hidden;
+	padding: 8px;
+}
+input [type=text]{
+     padding:6px 16px;
+     font-size: 17px;
+
+}
+ nav a{
+	color: #fff;
+	text-decoration: none;
+	border:2px solid #000;
+	margin: 4px;
+	padding: 5px 20px;
+}
+ nav a:hover{
+	background-color: #fff;
+	color: #000;
+}
+figure{
+	text-decoration-style: none;
+	display: inline-block;
+}
+figure img{
+	display:block
+	border:2px solid #000;
+	margin: 2px;
+	padding: 3px 5px;
+}
+ 	figure img:hover{
+	background-color: #fff;
+	color: #000;
+}
+.advertisement source img{
+	display:inline-block;
+
+}
+.advertisement source img{
+	display:block
+	border:2px solid #000;
+	margin: 4px;
+	padding: 8px 40px;
+
+}
+video{
+	width: 400;
+	height: 500;
+
+}
+.drop{
+	position: relative;
+  	display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.drop:hover .dropdown-content {
+  display: block;
+}
+h3{
+	display: inline-block;
+    color: #fff;
+	text-decoration: none;
+	margin: 4px;
+	padding: 5px 20px;
+}
+figcaption{
+	text-align: center;
+}
+.dropdown-content p a{
+	text-decoration-style: none;
+	color: #000;
+	padding: 5px 20px;
+	border: none;
+}
+.dropdown-content p a:hover{
+	color: blue;
+}
+figure a{
+	text-decoration-style: none;
+	color: #000;
+	border: none;
+}
+figure a:hover{
+	color: blue;
+	border: none;
+}
+figcaption{
+	text-decoration-style: none;
+}
+.form{
+
+	padding-top: 20%;
+	text-align: center;
+
+	font-size:17  xpx;
+}
+.btn{
+	border: 2px solid #000;
+ font-size:17px;
+    padding-right: 5%; 
+}
+.btnn{
+	font-size:17px;
+	border: 2px solid #000;
+	padding:1% 9%;
+}
+.details{
+	padding-top: 20%;
+	text-align: center;
+	font-size:17px;
+
+}

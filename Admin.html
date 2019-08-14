@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="F:\ARUN\style.css">
+	<script>
+	
+			var arr=[];
+		
+		function validate()
+{
+	var emailaddress=document.forms["myloginform"]["emailaddress"].value;
+	var password=document.forms["myloginform"]["password"].value;
+	console.log(emailaddress.trim().length)
+	console.log(password.trim().length)
+	if (emailaddress.trim().length==0 || password.trim().length==0) {
+		console.log("field cannot empty")
+		 alert("Name must be filled out");
+    return false;
+	}
+	else{
+var user={"emailaddress":emailaddress,"password":password}
+arr.push(user)
+}
+}
+function display()
+{
+	for(i=0;i<arr.length;i++){
+		document.write(arr[i].emailaddress);
+		document.write("<br/>")
+		document.write(arr[i].password)
+	}
+}
+	</script>
+
+</head>
+<body>
+	<div class="form">
+	<form name='myloginform'>
+username: <input type='text' name='emailaddress'/><br><br>
+password: <input  type='password' name='password'/><br><br>
+<a href="adminuse.html"> <input class="btn" type='button' value='login' onclick="validate()"/></a>
+<input class="btn" type="button" value="display" onclick="display()"/>
+</form></div>
+</body>
+</html>
