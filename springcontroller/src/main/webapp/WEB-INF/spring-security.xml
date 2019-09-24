@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+	<http auto-config="true">
+	  <intercept-url pattern="/admin" access="ROLE_ADMIN"/>
+<!-- 	  <form-login login-page="/login" default-target-url="/admin" authentication-failure-url="/error"  /> -->
+	  <intercept-url pattern="/cart" access="ROLE_USER"/>
+	  <intercept-url pattern="/addtocart" access="ROLE_USER"/>
+<!-- 	  <intercept-url value='add to cart' access="ROLE_USER"/> -->
+	  <form-login login-page="/login" default-target-url="/userhome" authentication-failure-url="/error"  />
+	  <logout/>
+	</http>
+	
+	<authentication-manager>
+	  <authentication-provider>
+	   <jdbc-user-service id="userService"
+data-source-ref="dataSource" users-by-username-query= "select email, password, true from userdetails where email=?"
+authorities-by-username-query="select email,user_role from userdetails where email=?" />
+	  </authentication-provider>
+	</authentication-manager>
+	</beans:beans>
